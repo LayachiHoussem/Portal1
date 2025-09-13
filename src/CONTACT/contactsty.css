@@ -1,0 +1,256 @@
+/* Define root color variables */
+:root {
+    --primary-color: rgb(240, 111, 5);
+    --background-color: #f5f5f5;
+    --primary-bg-color: #01022e;
+    --card-hover-background: #01022e;
+    --card-text-color: rgb(40, 130, 1);
+    --card-hover-color: #fff;
+    --nav_a_color: rgb(40, 130, 1);
+
+}
+
+/* Ajuster la hauteur du main */
+
+body {
+    margin-top: 5rem;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+/* General Body Styles */
+
+/* Navigation Bar */
+/* Search Bar */
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+
+.search label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    margin-right: 8px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.search input {
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--card-border-color);
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+.search input:focus {
+    border: 2px solid var(--input-focus-color);
+}
+
+
+/* cards_app container_app */
+.container_app {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* cards_app Layout (Responsive Grid) */
+.cards_app {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    max-width: 2000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Individual Contact cards_app */
+.cards_app li {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    width: 400px;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+/*e hover de card */
+.cards_app li:hover {
+    transform: scale(1.05);
+    background: var(--input-focus-color);
+
+}
+
+/* Contact Image */
+.cards_app li img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px var(--input-focus-color);
+
+}
+
+
+/* Contact details_app */
+.details_app {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.details_app span,
+.details_app a {
+    display: block;
+    margin: 5px 0;
+    color: #01022e;
+    font-weight: 600;
+}
+
+.details_app a {
+    color: #01022e;
+    text-decoration: none;
+}
+
+.details_app a:hover {
+    text-decoration: underline;
+    color: var(--card-hover-color);
+}
+
+/* ======== RESPONSIVE DESIGN ======== */
+
+/* Tablets & Small Screens */
+@media (max-width: 1800px) {
+    .search {
+        margin-top: 10px;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cards_app {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 10px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .search {
+        margin-top: 10px;
+        width: 80%;
+        justify-content: center;
+    }
+
+    .cards_app {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 10px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 900px) {
+    .search {
+        margin-top: 5rem;
+        width: 80%;
+        justify-content: center;
+    }
+
+    .cards_app {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 10px;
+        margin: 10px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    .search {
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5rem;
+    }
+
+    .search input {
+        width: 100%;
+    }
+
+    .cards_app {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .cards_app li {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+/* Make sure the whole list section fills the screen */
+.contact-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+/* Push pagination to the bottom */
+.container_app {
+  flex: 1;
+}
+
+/* Already provided before - reuse this */
+.pagination_controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.pagination_controls button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  background-color: #01022e;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.pagination_controls button:hover {
+  background-color: var(--primary-color);
+}
+
+.pagination_controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination_controls span {
+  font-weight: bold;
+}

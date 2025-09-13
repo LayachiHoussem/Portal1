@@ -1,0 +1,13 @@
+📝 Notes sur la version actuelle du portail SAMHA
+
+1.Ajout de liens fonctionnels
+Des liens ont été ajoutés et fonctionnent correctement.
+
+2.Section "Contact" inchangée
+La section "Contact" n'a pas été modifiée et conserve une size manuelle.
+
+3.Ajout de documents
+Les documents ont été ajoutés avec succès, mais chacun ne contient qu'un 3 département (3 niveau) .
+
+4.Page de connexion créée
+La page de connexion a été créée ; le développement du backend est en cours.

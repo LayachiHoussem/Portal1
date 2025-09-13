@@ -1,0 +1,157 @@
+/* Reset de base */
+
+
+/* Page login prend toute la hauteur */
+.login-page {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Wrapper centré */
+.login-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container principal */
+.login-container {
+  display: flex;
+  width: 900px;
+  height: 520px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Partie gauche */
+.login-left {
+  flex: 1;
+  background-color: #01022e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.login-left img {
+  width: 550px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Partie droite */
+.login-right {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-right h2 {
+  color: #01022e;
+  margin-bottom: 10px;
+}
+
+/* Formulaire */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form h3 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.login-form button {
+  padding: 12px;
+  background: #01022e;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  color: #01022e;
+  border: 1px solid #01022e;
+  background: white;
+}
+
+.login-form-footer {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-form-footer a {
+  color: #01022e;
+  text-decoration: none;
+}
+
+.login-form-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Message d'erreur */
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .login-left,
+  .login-right {
+    padding: 20px;
+    width: 100%;
+    flex: none;
+  }
+
+  .login-left img {
+    width: 150px;
+  }
+}
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.show-password-button {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}

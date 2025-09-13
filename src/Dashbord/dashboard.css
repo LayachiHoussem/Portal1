@@ -1,0 +1,87 @@
+
+  
+  .dashboard-container {
+    display: flex;
+   
+  }
+  
+  .sidebar {
+
+    width: 220px;
+    background-color: #1f2937;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin: 10px 0;
+    background-color: #374151;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .sidebar button:hover {
+    background-color: #4b5563;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #ffffff;
+  }
+  
+  /* Réutilisation des styles de formulaire */
+  form {
+    max-width: 600px;
+    margin-top: 10px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+  }
+  
+  form input,
+  form select,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    box-sizing: border-box;
+  }
+  
+  form textarea {
+    height: 80px;
+    resize: vertical;
+  }
+  
+  form button {
+    padding: 10px 16px;
+    background-color: #2563eb;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #1d4ed8;
+  }
+  

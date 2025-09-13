@@ -1,0 +1,165 @@
+html,
+body,
+.app {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* Conteneur principal */
+.app {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajuster la hauteur du main */
+main {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Évite que le contenu soit caché sous la navbar */
+}
+
+/* Navigation Bar */
+nav {
+    background:#01022e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    /* Fixe la navbar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+    /* Assure qu'elle reste au-dessus */
+    padding: 0 1rem;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    height: 40px;
+    margin: 0.5rem;
+}
+
+nav .logo a {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    align-items: center;
+
+}
+
+/* Liens de navigation */
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    margin-right: 2rem;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--highlight-color);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 0rem 1.5rem;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: transform 0.4s, opacity 0.4s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    /* Affiche le menu hamburger */
+    .hamburger {
+        display: flex;
+        right: 0;
+    }
+
+    /* Cache les liens de navigation */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: var(--primary-bg-color);
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        padding: 1rem 0;
+    }
+
+    /* Active le menu en mode mobile */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .logo {
+        padding-left: 1rem;
+    }
+
+    nav .logo img {
+        height: 30px;
+        margin: 0.3rem;
+    }
+
+    nav .logo a {
+        font-size: rem;
+    }
+}
+
+/* Responsive pour les très petits écrans */
+@media (max-width: 480px) {
+    .hamburger {
+
+        flex-direction: column;
+        cursor: pointer;
+        margin-right: 2.5rem;
+    }
+
+    .logo {
+        padding-left: 0.5rem;
+    }
+
+    nav .logo img {
+        height: 25px;
+        margin: 0.2rem;
+    }
+
+    nav .logo a {
+        font-size: 1rem;
+
+    }
+}
